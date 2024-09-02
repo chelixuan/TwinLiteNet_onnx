@@ -12,11 +12,13 @@ int main()
 {
 
     // Model Loading and associated initalisations
-    TwinLiteNet twinlitenet("/mnt/sdd1/personal/TwinLiteNet-opencv-dnn/models/best.onnx");
+    // TwinLiteNet twinlitenet("/mnt/sdd1/personal/TwinLiteNet-opencv-dnn/models/best.onnx");
+    TwinLiteNet twinlitenet("../models/best.onnx");
     std::cout << "Model Loaded" << std::endl;
 
     // Read the image
-    cv::Mat img = cv::imread("/mnt/sdd1/personal/TwinLiteNet-opencv-dnn/images/cc97fab0-f9a08d07.jpg");
+    // cv::Mat img = cv::imread("/mnt/sdd1/personal/TwinLiteNet-opencv-dnn/images/cc97fab0-f9a08d07.jpg");
+    cv::Mat img = cv::imread("../images/cc97fab0-f9a08d07.jpg");
 
     if (img.empty())
     {

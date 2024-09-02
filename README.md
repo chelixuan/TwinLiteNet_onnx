@@ -54,9 +54,14 @@ I would like to express sincere gratitude to the creators of the [TwinLiteNet mo
 1. Clone this repository.
 2. Build the project using CMake with your preferred build options.
 ```cpp
-mkdir build
-cd build
+mkdir build && cd build
+
+# Enable CUDA support for GPU acceleration
 cmake  -DENABLE_CUDA=ON ..
+# CPU-based inference
+cmke ..
+
+# 使用 8 cpu 加速编译
 make -j8
 ```
 4. Execute `./main` and Enjoy accurate lane detection and drivable area results!
